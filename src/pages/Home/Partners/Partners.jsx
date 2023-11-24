@@ -1,11 +1,11 @@
 
 const Partners = () => {
     return (<>
-        <div className="text-center py-10 space-y-3 mt-7">
-            <h2 className="text-5xl text-[#262525] font-bold">Partners and Collaborators</h2>
+        <div className="text-center py-10 space-y-3 md:mt-7 mt-4 px-8 lg:px-0">
+            <h2 className="md:text-5xl text-3xl text-[#262525] font-bold">Partners and Collaborators</h2>
             <p>Trusted by over 15,000 companies and millions of learners around the world</p>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-8 xl:px-0 space-y-5 md:space-y-0">
             <div className="text-center space-y-3">
                 <div className="avatar">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

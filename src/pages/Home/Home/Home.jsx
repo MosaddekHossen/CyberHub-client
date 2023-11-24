@@ -9,6 +9,9 @@ const Home = () => {
                 <Banner></Banner>
                 <Partners></Partners>
                 <Category></Category>
+                <div className="mt-60">
+                    
+                </div>
             </div>
         </div>
     );
