@@ -12,8 +12,8 @@ const Banner = () => {
             thumbnail: "https://img.freepik.com/free-photo/clever-schoolgirl-with-laptop-class_1098-2620.jpg",
         },
         {
-            original: "https://img.freepik.com/free-photo/concentrated-young-geometry-teacher-wearing-glasses-standing-front-chalkboard-classroom-reading-book_141793-120219.jpg?w=1060&t=st=1700822311~exp=1700822911~hmac=f2105b430e96486ae1e91bce567bceb2f499c6207b7bef90e50094bc336fc897",
-            thumbnail: "https://img.freepik.com/free-photo/concentrated-young-geometry-teacher-wearing-glasses-standing-front-chalkboard-classroom-reading-book_141793-120219.jpg?w=1060&t=st=1700822311~exp=1700822911~hmac=f2105b430e96486ae1e91bce567bceb2f499c6207b7bef90e50094bc336fc897",
+            original: "https://img.freepik.com/free-photo/businesspeople-celebrating-success_1098-1996.jpg",
+            thumbnail: "https://img.freepik.com/free-photo/businesspeople-celebrating-success_1098-1996.jpg",
         },
         {
             original: "https://img.freepik.com/premium-photo/young-asian-teacher-man-teaching-video-conference-with-student_208349-895.jpg?w=996",
