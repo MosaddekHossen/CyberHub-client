@@ -1,9 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Header = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const { user, logOut } = useContext(AuthContext)
     const [isOpen, setIsOpen] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    // Sign Out
+    const handleLogout = () => {
+        logOut()
+            .then(() => Swal.fire('Oops!', 'LogOut Successful!', 'success'))
+            .catch((err) => Swal.fire('Oops!', err.message, 'error'))
+    }
 
     const navLink = <>
         <ul className="menu menu-horizontal px-1 lg:flex gap-1 hidden">
@@ -22,10 +32,10 @@ const Header = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={'/cyberHub'}
+                <NavLink to={'/teaching'}
                     className={({ isActive, isPending }) =>
                         isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    CyberHub
+                    Teaching
                 </NavLink>
             </li>
         </ul>
@@ -48,10 +58,10 @@ const Header = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={'/cyberHub'}
+                <NavLink to={'/teaching'}
                     className={({ isActive, isPending }) =>
                         isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    CyberHub
+                    Teaching
                 </NavLink>
             </li>
         </ul>
@@ -106,25 +116,25 @@ const Header = () => {
                     <div
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        {isOpen ? <>
+                        {user ? <>
                             <label tabIndex={0} className="btn btn-secondary btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <label>
                                         <div>
-                                            <img className="w-10 rounded-full" />
+                                            <img className="w-10 rounded-full" src={user?.photoURL} />
                                         </div>
                                     </label>
                                 </div>
                             </label>
 
                         </>
-                            : <Link to={'/login'}><button className="btn btn-primary mr-3">Login</button></Link>}
+                            : <Link to={'/signIn'}><button className="btn btn-primary mr-3">Sign In</button></Link>}
                     </div>
-                    {isOpen && (
+                    {user && isOpen && (
                         <div className='absolute rounded-xl shadow-md w-[40vw] p-2 md:p-2 lg:w-[10vw] mr-2 md:w-[20vw] bg-white right-0 top-20'>
                             <div className='flex flex-col justify-center items-center cursor-pointer'>
-                                <h3 className="font-bold text-center text-green-500"></h3>
-                                <button className="lg:px-5 px-3 mt-2 text-white lg:mt-3 rounded-lg text-[16px] font-bold py-3 bg-[#a433aa]">Login Out</button>
+                                <h3 className="font-bold text-center text-green-500">{user?.displayName}</h3>
+                                <button onClick={handleLogout} className="lg:px-5 px-3 mt-2 text-white lg:mt-3 rounded-lg text-[16px] font-bold py-3 bg-[#a433aa]">Login Out</button>
                             </div>
                         </div>
                     )}

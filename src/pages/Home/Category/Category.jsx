@@ -1,6 +1,7 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import "./style.css"
+import SectionTitle from "../../../components/SectionTitle/SectionTitle"
 
 const Category = () => {
 
@@ -31,10 +32,10 @@ const Category = () => {
     )
 
     return (<>
-        <div className="text-center py-10 space-y-3 md:mt-7 mt-4 px-8 md:px-0">
-            <h2 className="md:text-5xl text-3xl text-[#262525] font-bold">Our Awesome Services</h2>
-            <p>Trusted by over 45,000 companies and millions of learners around the world</p>
-        </div>
+        <SectionTitle
+            heading={'Our Awesome Services'}
+            subHeading={'Trusted by over 45,000 companies and millions of learners around the world'}
+        ></SectionTitle>
         <div className="wrapper my-5 block">
             <div className="scene">
                 <div className="carousel keen-slider" ref={sliderRef}>
@@ -53,7 +54,7 @@ const Category = () => {
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" checked />
+                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                             </div>
                             <p className="font-normal">Become a proficient full-stack web developer by mastering both front-end and back-end technologies.</p>
                         </div>
@@ -72,8 +73,8 @@ const Category = () => {
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" checked />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
                             </div>
                             <p className="font-normal">Dive into the fascinating realms of data science and machine learning.</p>
                         </div>
@@ -92,8 +93,8 @@ const Category = () => {
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" checked />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
                             </div>
                             <p className="font-normal">Unlock the secrets of effective digital marketing strategies.</p>
                         </div>
@@ -113,7 +114,7 @@ const Category = () => {
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" checked />
+                                <input type="radio" name="rating-9" className="mask mask-star-2" />
                             </div>
                             <p className="font-normal">Take a journey towards tranquility and well-being with mindfulness meditation.</p>
                         </div>
@@ -122,7 +123,7 @@ const Category = () => {
                         <div className="text-center space-y-3">
                             <div className="avatar">
                                 <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                    <img src="https://img.freepik.com/premium-photo/successful-positive-bearded-man-looking-camera-with-toothy-smile-indoor-studio-shot-isolated-blue-background_533057-1741.jpg" />
+                                    <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=740&t=st=1700838882~exp=1700839482~hmac=afd862722c78d9470de37d8da95848143f8c99269c9eade2db407c0f308e107d" />
                                 </div>
                             </div>
                             <h3 className="text-2xl font-semibold text-[#141414]">Photography: Capturing Moments with Impact</h3>
@@ -133,7 +134,7 @@ const Category = () => {
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                                 <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
-                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" checked />
+                                <input type="radio" name="rating-9" className="mask bg-[#eff147] mask-star-2" />
                             </div>
                             <p className="font-normal">Elevate your photography skills and learn to capture moments with lasting impact.</p>
                         </div>
