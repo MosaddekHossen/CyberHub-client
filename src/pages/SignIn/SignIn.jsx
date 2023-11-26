@@ -1,12 +1,14 @@
-import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const SignIn = () => {
+    const { signIn, googleLogin } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    const { signIn, googleLogin } = useContext(AuthContext);
+
+    const from = location.state?.from?.pathname || "/";
 
     // Login User
     const handleLogin = (e) => {
@@ -20,7 +22,8 @@ const SignIn = () => {
                 Swal.fire('Good job!', 'Success Sign In!', 'success')
                 e.target.reset();
                 navigate("/");
-                navigate(location?.state ? location?.state : '/');
+                // navigate(location?.state ? location?.state : '/');
+                navigate(from, { replace: true });
             })
             .catch(err => {
                 console.log(err.message)
@@ -34,13 +37,17 @@ const SignIn = () => {
             .then(() => {
                 Swal.fire('Good job!', 'Google Login Successful!', 'success');
                 // navigate('/');
-                navigate(location?.state ? location?.state : '/');
+                // navigate(location?.state ? location?.state : '/');
+                navigate(from, { replace: true });
             })
             .catch(err => Swal.fire('Good job!', err.message, 'error'))
     }
 
     return (
         <div>
+            <Helmet>
+                <title>CyberHub | SignIn</title>
+            </Helmet>
             <div className="justify-center my-20 flex">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h2 className="md:text-4xl text-2xl mt-7 mx-auto flex justify-center font-bold text-black">Please Login Now!</h2>

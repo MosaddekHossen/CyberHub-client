@@ -2,13 +2,13 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
-import { useContext, useState } from "react";
-import { Helmet } from 'react-helmet';
-import { AuthContext } from '../../Providers/AuthProvider';
+import { useState } from "react";
+import useAuth from '../../Hooks/useAuth';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { createUser } = useContext(AuthContext);
+    const { createUser } = useAuth();
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -66,7 +66,7 @@ const SignUp = () => {
     return (
         <div>
             <Helmet>
-                <title>Food Sh | SignUp</title>
+                <title>CyberHub | SignUp</title>
             </Helmet>
             <div className="text-center px-8 lg:px-0 pb-10">
                 <div className="mx-auto lg:w-1/3 md:w-2/3 mt-20 bg-[#8470c2] p-5 rounded-lg border-2">

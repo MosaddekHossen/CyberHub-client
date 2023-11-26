@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Teaching = () => {
+const Teacher = () => {
     return (
         <div>
             <div className="max-w-7xl mx-auto mt-20 lg:mb-16 md:mb-5 mb-4" data-aos="zoom-in">
@@ -20,4 +20,4 @@ const Teaching = () => {
     );
 };
 
-export default Teaching;
+export default Teacher;

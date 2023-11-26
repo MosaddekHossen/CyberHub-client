@@ -113,15 +113,13 @@ const Header = () => {
                         onChange={handleToggle}
                     />
 
-                    <div
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
+                    <div onClick={() => setIsOpen(!isOpen)}>
                         {user ? <>
                             <label tabIndex={0} className="btn btn-secondary btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <label>
                                         <div>
-                                            <img className="w-10 rounded-full" src={user?.photoURL} />
+                                            <img className="w-10 rounded-full cursor-pointer" src={user?.photoURL} />
                                         </div>
                                     </label>
                                 </div>
@@ -132,7 +130,7 @@ const Header = () => {
                     </div>
                     {user && isOpen && (
                         <div className='absolute rounded-xl shadow-md w-[40vw] p-2 md:p-2 lg:w-[10vw] mr-2 md:w-[20vw] bg-white right-0 top-20'>
-                            <div className='flex flex-col justify-center items-center cursor-pointer'>
+                            <div className='flex flex-col justify-center items-center'>
                                 <h3 className="font-bold text-center text-green-500 cursor-not-allowed">{user?.displayName}</h3>
                                 <Link to={'/dashboard'}>
                                     <button className="btn btn-ghost mt-2 text-[16px] font-bold bg-gray-500 text-white hover:text-slate-600">Dashboard</button>

@@ -6,7 +6,8 @@ import ErrorPage from "../ErrorPage";
 import Home from "../pages/Home/Home/Home";
 import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
-import Teaching from "../pages/Home/Teaching/Teaching";
+import PrivateRoute from "./PrivateRoute";
+import Teaching from "../pages/Teaching/Teaching/Teaching";
 
 const Routes = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/teaching',
-                element: <Teaching></Teaching>
+                element: <PrivateRoute><Teaching></Teaching></PrivateRoute>
             }
         ]
     },

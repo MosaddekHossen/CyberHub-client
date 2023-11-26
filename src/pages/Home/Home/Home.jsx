@@ -1,12 +1,12 @@
-import { Helmet } from "react-helmet";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Partners from "../Partners/Partners";
-import Teaching from "../Teaching/Teaching";
+import Teacher from "../Teacher/Teacher";
 import Company from "../Company/Company";
 import Users from "../Users/Users";
 import Stay from "../Stay/Stay";
 import Slider from "../Slider/Slider";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
@@ -21,7 +21,7 @@ const Home = () => {
                 <Partners></Partners>
                 <Category></Category>
                 <div className="mt-60">
-                    <Teaching></Teaching>
+                    <Teacher></Teacher>
                 </div>
                 <Stay></Stay>
                 <Slider></Slider>
