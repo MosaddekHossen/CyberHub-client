@@ -10,7 +10,7 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 
 const Stay = () => {
     return (
-        <div className='mb-24'>
+        <div className='mb-14'>
             <SectionTitle
                 heading={"Stay Connected"}
                 subHeading={"At a Glance"}

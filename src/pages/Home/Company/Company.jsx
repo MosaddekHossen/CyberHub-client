@@ -2,7 +2,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Company = () => {
     return (
-        <div className="bg-[#d9d6d6]">
+        <div className="bg-slate-300">
             <SectionTitle
                 heading={"Your Company"}
                 subHeading={"We believe in the power of collaboration to drive innovation and success."}

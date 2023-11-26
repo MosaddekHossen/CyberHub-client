@@ -16,7 +16,7 @@ const Partners = () => {
                 <h2 className="text-3xl font-bold text-[#141414]">Oliver</h2>
                 <h3 className="text-2xl font-semibold text-[#141414]">Global Learning Institute</h3>
                 <p className="font-normal">Our alliance with the Global Learning Institute focuses on expanding access to high-quality education globally. Together, we develop online courses, workshops, and collaborative projects that empower learners with diverse educational opportunities, bridging gaps and promoting lifelong learning.</p>
-                <button className="bg-[#2c66d1] btn">View Profile</button>
+                <button className="bg-slate-300 btn">View Profile</button>
             </div>
             <div className="text-center space-y-3">
                 <div className="avatar">
@@ -27,7 +27,7 @@ const Partners = () => {
                 <h2 className="text-3xl font-bold text-[#141414]">Benjamin</h2>
                 <h3 className="text-2xl font-semibold text-[#141414]">EdTech Innovations</h3>
                 <p className="font-normal">Partnering with EdTech Innovations allows us to stay at the forefront of educational technology. Through joint ventures, we integrate cutting-edge tools and platforms into our learning programs, ensuring that students benefit from the latest advancements in digital education and interactive learning.</p>
-                <button className="bg-[#2c66d1] btn">View Profile</button>
+                <button className="bg-slate-300 btn">View Profile</button>
             </div>
             <div className="text-center space-y-3">
                 <div className="avatar">
@@ -38,7 +38,7 @@ const Partners = () => {
                 <h2 className="text-3xl font-bold text-[#141414]">Ethan</h2>
                 <h3 className="text-2xl font-semibold text-[#141414]">STEAM Education Alliance</h3>
                 <p className="font-normal">The partnership with the STEAM Education Alliance emphasizes the importance of Science, Technology, Engineering, Arts, and Mathematics (STEAM) education. Together, we develop engaging curriculum content, organize STEM events, and encourage hands-on learning experiences to inspire the next generation of innovators.</p>
-                <button className="bg-[#2c66d1] btn">View Profile</button>
+                <button className="bg-slate-300 btn">View Profile</button>
             </div>
             <div className="text-center space-y-3">
                 <div className="avatar">
@@ -50,7 +50,7 @@ const Partners = () => {
                 <h3 className="text-2xl font-semibold text-[#141414]">Global Learning Institute</h3>
                 <p className="font-normal">
                     These education partnerships reflect our dedication to providing a holistic and inclusive learning environment. By collaborating with these organizations, we strive to empower individuals, promote educational equity, and contribute to the advancement of knowledge on a global scale.</p>
-                <button className="bg-[#2c66d1] btn">View Profile</button>
+                <button className="bg-slate-300 btn">View Profile</button>
             </div>
         </div>
     </>

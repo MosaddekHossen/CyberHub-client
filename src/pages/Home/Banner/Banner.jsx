@@ -26,9 +26,23 @@ const Banner = () => {
     ];
 
     return (
-        <div>
-            <ImageGallery items={images} />
-        </div>
+        <ImageGallery
+            items={images}
+            renderItem={(item) => (
+                <div>
+                    <img
+                        src={item.original}
+                        alt={item.originalAlt}
+                        style={{
+                            width: '100%',
+                            height: '90.5vh',
+                            objectFit: 'cover',
+                            objectPosition: 'top'
+                        }}
+                    />
+                </div>
+            )}
+        />
     );
 };
 
