@@ -77,7 +77,7 @@ const SignIn = () => {
                                 <button className="btn text-white text-[16px] font-bold hover:text-[#393939] bg-[#4d55cd]">Login</button>
                             </div>
                         </form>
-                        <button onClick={handleGoogleLogin} className="btn text-[16px] font-bold btn-primary flex justify-between rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+                        <button onClick={handleGoogleLogin} className="text-[16px] hover:text-[#393939] font-bold text-white btn bg-[#4d55cd] flex justify-between rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
                             <g>
                                 <path d="M30.9999 16.2335C30.9999 15.1547 30.9128 14.0702 30.7268 13.0089H15.8108V19.1198H24.3525C23.998 21.0907 22.8592 22.8342 21.1915 23.9421V27.9071H26.2875C29.28 25.1432 30.9999 21.0615 30.9999 16.2335Z" fill="#4285F4" />
                                 <path d="M15.811 31.738C20.0761 31.738 23.6729 30.3328 26.2935 27.9071L21.1975 23.942C19.7797 24.91 17.9494 25.4581 15.8168 25.4581C11.6913 25.4581 8.19322 22.665 6.93811 18.9099H1.67944V22.9974C4.36398 28.3561 9.83183 31.738 15.811 31.738Z" fill="#34A853" />
@@ -91,7 +91,7 @@ const SignIn = () => {
                             </defs>
                         </svg>Google Login</button>
                         <p>Do not have an account? <Link to={'/signUp'}><button href="" className="text-amber-500 mt-5 underline">Create an account</button></Link></p>
-                        <Link to={'/'} className="btn btn-neutral mt-5 bg-[#2ed573] border-none">Go to home</Link>
+                        <Link to={'/'} className="btn btn-neutral mt-5 bg-[#4d55cd] border-none">Go to home</Link>
                     </div>
                 </div>
             </div>

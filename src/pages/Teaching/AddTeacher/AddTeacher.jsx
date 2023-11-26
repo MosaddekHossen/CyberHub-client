@@ -1,9 +1,11 @@
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AddTeacher = () => {
     const { user } = useAuth();
     const { photoURL, displayName } = user || {};
+    const axiosSecure = useAxiosSecure();
 
     const handleAdd = event => {
         event.preventDefault();
@@ -16,21 +18,36 @@ const AddTeacher = () => {
         const request = { name, experience, title, category, userImage }
         console.log(request);
 
-        // Send data to the server
-        fetch('http://localhost:5000/food', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(request)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
+        // Send data to the server (Normal)
+        // fetch('http://localhost:500/request', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(request)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         if (data.insertedId) {
+        //             Swal.fire({
+        //                 title: 'Success!',
+        //                 text: 'Added teacher request apply successfully!',
+        //                 icon: 'success',
+        //                 confirmButtonText: 'Cool'
+        //             })
+        //             form.reset();
+        //         }
+        //     })
+
+        // (Axios)
+        axiosSecure.post('/request', request)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Add Food successfully!',
+                        text: 'Added teacher request apply successfully!',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -42,7 +59,7 @@ const AddTeacher = () => {
     return (
         <>
             <div className="my-14 max-w-5xl lg:px-24 px-10 py-14 rounded-md bg-[#F4F3F0] mx-auto text-center">
-                <h2 className="text-5xl font-extrabold pb-10">Apply teaching position</h2>
+                <h2 className="md:text-5xl text-3xl font-extrabold pb-10">Application as a teacher</h2>
                 <form onSubmit={handleAdd}>
                     {/* Form row */}
                     <div className="md:flex gap-10 justify-between md:mb-5">

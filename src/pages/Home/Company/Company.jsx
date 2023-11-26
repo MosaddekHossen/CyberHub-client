@@ -4,7 +4,7 @@ const Company = () => {
     return (
         <div className="bg-slate-300">
             <SectionTitle
-                heading={"Your Company"}
+                heading={"Partners and Collaborators"}
                 subHeading={"We believe in the power of collaboration to drive innovation and success."}
             ></SectionTitle>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-8 xl:px-0 space-y-5 md:space-y-0 p-10">

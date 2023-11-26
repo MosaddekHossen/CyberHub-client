@@ -3,7 +3,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 const Partners = () => {
     return (<>
         <SectionTitle
-            heading={"Partners and Collaborators"}
+            heading={"Our Company"}
             subHeading={"Trusted by over 15,000 companies and millions of learners around the world"}
         ></SectionTitle>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-8 xl:px-0 space-y-5 md:space-y-0">
