@@ -89,7 +89,7 @@ const Header = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto sticky top-0 z-50 bg-slate-300">
             <div className="navbar flex justify-between">
                 <div className="lg:navbar-start lg:w-auto w-3/2">
                     <img className="h-[50px] w-[70] hidden lg:block rounded-lg" src="https://img.freepik.com/premium-vector/meandstudio_691652-245.jpg?w=740" alt="" />

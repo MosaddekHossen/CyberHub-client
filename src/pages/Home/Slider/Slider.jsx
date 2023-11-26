@@ -4,7 +4,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { useEffect, useState } from 'react';
-import { SlBadge } from 'react-icons/sl';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const Slider = () => {
@@ -46,11 +45,16 @@ const Slider = () => {
                         <div className="md:mx-24 md:mb-24 mx-12 mb-12 text-center">
                             {/* Title with SlBadge icon */}
                             <div className="title flex justify-center mb-4" data-swiper-parallax="-300">
-                                <SlBadge className='text-7xl font-bold text-indigo-400' />
+                                <div className="avatar">
+                                    <div className="w-14 mt-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                        <img src={review?.image} />
+                                    </div>
+                                </div>
                             </div>
                             {/* Subtitle with review name */}
                             <div className="subtitle" data-swiper-parallax="-200">
                                 <h2 className='font-bold text-2xl pb-5'>{review?.name}</h2>
+                                <h2 className='font-bold text-[18px] pb-5'>{review?.title}</h2>
                             </div>
                             {/* Text with review details */}
                             <div className="text" data-swiper-parallax="-100">
