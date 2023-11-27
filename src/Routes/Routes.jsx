@@ -8,6 +8,9 @@ import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Teaching from "../pages/Teaching/Teaching/Teaching";
+import Dashboard from "../Layout/Dashboard";
+import ThHome from "../pages/Dashboard/ThHome/ThHome";
+import AllClasses from "../pages/AllClasses/AllClasses";
 
 const Routes = createBrowserRouter([
     {
@@ -18,6 +21,11 @@ const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
+            },
+            {
+                path: '/allClasses',
+                element: <PrivateRoute><AllClasses></AllClasses></PrivateRoute>,
+                loader: () => fetch('http://localhost:500/request')
             },
             {
                 path: '/signIn',
@@ -33,6 +41,16 @@ const Routes = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'teacherProfile',
+                element: <PrivateRoute><ThHome></ThHome></PrivateRoute>
+            }
+        ]
+    }
 ]);
 
 

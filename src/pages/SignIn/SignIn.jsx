@@ -17,8 +17,8 @@ const SignIn = () => {
         const password = e.target.password.value;
 
         signIn(email, password)
-            .then(res => {
-                console.log(res.user)
+            .then(() => {
+                // console.log(res.user)
                 Swal.fire('Good job!', 'Success Sign In!', 'success')
                 e.target.reset();
                 navigate("/");

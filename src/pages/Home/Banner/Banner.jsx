@@ -35,7 +35,7 @@ const Banner = () => {
                         alt={item.originalAlt}
                         style={{
                             width: '100%',
-                            height: '90.5vh',
+                            height: '91vh',
                             objectFit: 'cover',
                             objectPosition: 'top'
                         }}

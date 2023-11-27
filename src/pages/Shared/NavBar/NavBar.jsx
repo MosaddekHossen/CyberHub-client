@@ -17,53 +17,46 @@ const Header = () => {
 
     const navLink = <>
         <ul className="menu menu-horizontal px-1 lg:flex gap-1 hidden">
-            <li>
-                <NavLink to={'/'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}>
-                    Home
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to={'/allClasses'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    All Classes
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to={'/teaching'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    Teaching
-                </NavLink>
-            </li>
+            <NavLink to={'/'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}>
+                Home
+            </NavLink>
+
+            <NavLink to={'/allClasses'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                All Classes
+            </NavLink>
+
+            <NavLink to={'/teaching'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Teaching
+            </NavLink>
+
+            <NavLink to={'/dashboard/teacherProfile'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Dashboard
+            </NavLink>
+
         </ul>
     </>
 
     const navLinkMd = <>
-        <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-slate-400 text-white">
-            <li>
-                <NavLink to={'/'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] my-3 hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}>
-                    Home
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to={'/allClasses'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] my-3 hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    All Classes
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to={'/teaching'}
-                    className={({ isActive, isPending }) =>
-                        isPending ? 'pending' : isActive ? 'bg-[#a433aa] hover:text-blue-400 font-bold py-2 px-5 rounded-md text-white' : ''}                        >
-                    Teaching
-                </NavLink>
-            </li>
+        <ul className="menu menu-sm dropdown-content mt-3 z-[1] flex gap-3 shadow rounded-box w-52 bg-slate-400 p-5 text-white">
+            <NavLink to={'/'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}>
+                Home
+            </NavLink>
+
+            <NavLink to={'/allClasses'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                All Classes
+            </NavLink>
+
+            <NavLink to={'/teaching'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Teaching
+            </NavLink>
+
         </ul>
     </>
 
@@ -90,7 +83,7 @@ const Header = () => {
 
     return (
         <div className="max-w-7xl mx-auto sticky top-0 z-50 bg-slate-300">
-            <div className="navbar flex justify-between">
+            <div className="navbar p-0 px-4 flex justify-between">
                 <div className="lg:navbar-start lg:w-auto w-3/2">
                     <img className="h-[50px] w-[70] hidden lg:block rounded-lg" src="https://img.freepik.com/premium-vector/meandstudio_691652-245.jpg?w=740" alt="" />
                     <div className="dropdown">
@@ -101,7 +94,7 @@ const Header = () => {
                     </div>
                     <Link to='/'><button className="normal-case text-[22px] md:text-3xl font-bold text-[#6531ae]">CyberHub</button></Link>
                 </div>
-                <div className="navbar-center lg:mx-auto lg:w-auto bg-white rounded-lg lg:flex">
+                <div className="navbar-center lg:mx-auto lg:w-auto rounded-lg lg:flex">
                     {navLink}
                 </div>
                 <div className="lg:navbar-end lg:w-auto w-3/1">
@@ -132,7 +125,7 @@ const Header = () => {
                         <div className='absolute rounded-xl shadow-md w-[40vw] p-2 md:p-2 lg:w-[10vw] mr-2 md:w-[20vw] bg-white right-0 top-20'>
                             <div className='flex flex-col justify-center items-center'>
                                 <h3 className="font-bold text-center text-green-500 cursor-not-allowed">{user?.displayName}</h3>
-                                <Link to={'/dashboard'}>
+                                <Link to={'/dashboard/adminProfile'}>
                                     <button className="btn btn-ghost mt-2 text-[16px] font-bold bg-gray-500 text-white hover:text-slate-600">Dashboard</button>
                                 </Link>
                                 <button onClick={handleLogout} className="lg:px-5 px-3 mt-2 hover:bg-gray-500 text-white lg:mt-3 rounded-lg text-[16px] font-bold py-3  bg-[#a433aa]">Login Out</button>

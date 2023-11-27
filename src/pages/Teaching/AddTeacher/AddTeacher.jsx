@@ -68,7 +68,7 @@ const AddTeacher = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <label>
-                                <input type="text" defaultValue={displayName} required name="name" placeholder="Name" className="input input-bordered w-full" />
+                                <input type="text" readOnly defaultValue={displayName} required name="name" placeholder="Name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
