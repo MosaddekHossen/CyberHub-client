@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 import useAuth from '../../Hooks/useAuth';
 import { Helmet } from 'react-helmet-async';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const SignUp = () => {
+    const axiosPublic = useAxiosPublic();
     const [showPassword, setShowPassword] = useState(false);
     const { createUser } = useAuth();
     const navigate = useNavigate();
@@ -49,6 +51,16 @@ const SignUp = () => {
                     photoURL: image
                 })
                     .then(() => {
+                        const userInfo = {
+                            name,
+                            email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    console.log("User added to the database.");
+                                }
+                            })
                         // console.log("Update Profile!")
                         window.location.reload();
                     })

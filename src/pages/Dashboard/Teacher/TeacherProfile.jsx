@@ -1,6 +1,6 @@
 import useAuth from "../../../Hooks/useAuth";
 
-const TProfile = () => {
+const TeacherProfile = () => {
     const { user } = useAuth();
     
     return (
@@ -24,4 +24,4 @@ const TProfile = () => {
     );
 };
 
-export default TProfile;
+export default TeacherProfile;

@@ -2,8 +2,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const SignIn = () => {
+    const axiosPublic = useAxiosPublic();
     const { signIn, googleLogin } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
@@ -21,7 +23,8 @@ const SignIn = () => {
                 // console.log(res.user)
                 Swal.fire('Good job!', 'Success Sign In!', 'success')
                 e.target.reset();
-                navigate("/");
+
+                // navigate("/");
                 // navigate(location?.state ? location?.state : '/');
                 navigate(from, { replace: true });
             })
@@ -34,8 +37,19 @@ const SignIn = () => {
     // Google Login
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(() => {
+            .then(result => {
                 Swal.fire('Good job!', 'Google Login Successful!', 'success');
+
+                // Added user to the database
+                const userInfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                    })
+
                 // navigate('/');
                 // navigate(location?.state ? location?.state : '/');
                 navigate(from, { replace: true });
