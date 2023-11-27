@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto">
             {/* Dashboard side bar */}
-            <div className="md:w-72 lg:w-80 w-full pb-10 md:pb-0 min-h-screen bg-indigo-300">
+            <div className="md:w-72 lg:w-80 w-full pb-10 md:pb-0 max-h-full md:min-h-screen bg-indigo-300">
                 <ul className="menu space-y-4 mt-5 grid justify-center">
                     <NavLink className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}
                         to={'/dashboard/teacherProfile'}><FaHome></FaHome>Teacher Profile</NavLink>

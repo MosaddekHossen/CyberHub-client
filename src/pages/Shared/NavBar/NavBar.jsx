@@ -91,11 +91,11 @@ const Header = () => {
                     <img className="h-[50px] w-[70] hidden lg:block rounded-lg" src="https://img.freepik.com/premium-vector/meandstudio_691652-245.jpg?w=740" alt="" />
                     <div className="dropdown">
                         <label tabIndex={0} className="btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-9 text-white bg-slate-600 font-black w-9 rounded-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         {navLinkMd}
                     </div>
-                    <Link to='/'><button className="normal-case text-[22px] md:text-3xl font-bold text-[#6531ae]">CyberHub</button></Link>
+                    <Link to='/'><button className="normal-case text-[24px] md:text-3xl font-bold text-[#6531ae]">CyberHub</button></Link>
                 </div>
                 <div className="navbar-center lg:mx-auto lg:w-auto rounded-lg lg:flex">
                     {navLink}
