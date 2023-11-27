@@ -1,11 +1,11 @@
 import useAuth from "../../../Hooks/useAuth";
 
-const ThHome = () => {
+const TProfile = () => {
     const { user } = useAuth();
     
     return (
         <div>
-            <div className="min-h-full bg-indigo-200 rounded-lg lg:w-1/2 w-full py-20  px-32">
+            <div className="min-h-full bg-indigo-200 rounded-lg lg:w-1/2 w-full py-20 px-10 lg:px-32">
                 <div className="hero-content text-center">
                     <div className="space-y-4">
                         <div className="avatar">
@@ -24,4 +24,4 @@ const ThHome = () => {
     );
 };
 
-export default ThHome;
+export default TProfile;

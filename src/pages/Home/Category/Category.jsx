@@ -34,7 +34,7 @@ const Category = () => {
     return (<>
         <SectionTitle
             heading={'Our Awesome Services'}
-            subHeading={'Trusted by over 45,000 companies and millions of learners around the world'}
+            subHeading={'Some of the currently popular or recommended classes or courses are highlighted'}
         ></SectionTitle>
         <div className="wrapper my-5 md:block">
             <div className="scene">
