@@ -36,7 +36,7 @@ const Category = () => {
             heading={'Our Awesome Services'}
             subHeading={'Trusted by over 45,000 companies and millions of learners around the world'}
         ></SectionTitle>
-        <div className="wrapper my-5 block">
+        <div className="wrapper my-5 md:block">
             <div className="scene">
                 <div className="carousel keen-slider" ref={sliderRef}>
                     <div className="carousel__cell number-slide1 px-8">

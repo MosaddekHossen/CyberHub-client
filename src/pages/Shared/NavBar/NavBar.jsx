@@ -56,7 +56,10 @@ const Header = () => {
                 className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
                 Teaching
             </NavLink>
-
+            <NavLink to={'/dashboard/teacherProfile'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Dashboard
+            </NavLink>
         </ul>
     </>
 
@@ -125,7 +128,7 @@ const Header = () => {
                         <div className='absolute rounded-xl shadow-md w-[40vw] p-2 md:p-2 lg:w-[10vw] mr-2 md:w-[20vw] bg-white right-0 top-20'>
                             <div className='flex flex-col justify-center items-center'>
                                 <h3 className="font-bold text-center text-green-500 cursor-not-allowed">{user?.displayName}</h3>
-                                <Link to={'/dashboard/adminProfile'}>
+                                <Link to={'/dashboard/teacherProfile'}>
                                     <button className="btn btn-ghost mt-2 text-[16px] font-bold bg-gray-500 text-white hover:text-slate-600">Dashboard</button>
                                 </Link>
                                 <button onClick={handleLogout} className="lg:px-5 px-3 mt-2 hover:bg-gray-500 text-white lg:mt-3 rounded-lg text-[16px] font-bold py-3  bg-[#a433aa]">Login Out</button>

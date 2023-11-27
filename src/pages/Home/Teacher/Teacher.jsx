@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Teacher = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto mt-20 lg:mb-16 md:mb-5 mb-4" data-aos="zoom-in">
+            <div className="max-w-7xl mx-auto mt-10 md:mt-20 lg:mb-16 md:mb-5 mb-4" data-aos="zoom-in">
                 <h2 className="lg:text-5xl text-4xl font-bold mb-5 text-center">Teaching</h2>
                 <div className="lg:h-full">
                     <div className="hero-content flex-col lg:flex-row">

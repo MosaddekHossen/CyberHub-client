@@ -40,7 +40,7 @@ const SignIn = () => {
                 // navigate(location?.state ? location?.state : '/');
                 navigate(from, { replace: true });
             })
-            .catch(err => Swal.fire('Good job!', err.message, 'error'))
+            .catch(err => Swal.fire('Oops!', err.message, 'error'))
     }
 
     return (

@@ -11,7 +11,7 @@ const AllClass = ({ request }) => {
                 </figure>
                 <div className="flex items-center mt-5 mx-4">
                     <div className="ml-3">
-                        {/* <h3 className="font-bold">Name: {name}</h3> */}
+                        <h3 className="font-bold">Name: {name}</h3>
                     </div>
                 </div>
                 <div className="p-5 ml-2">
