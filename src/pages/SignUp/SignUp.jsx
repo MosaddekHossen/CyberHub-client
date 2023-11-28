@@ -53,6 +53,7 @@ const SignUp = () => {
                     .then(() => {
                         const userInfo = {
                             name,
+                            image,
                             email
                         }
                         axiosPublic.post('/users', userInfo)

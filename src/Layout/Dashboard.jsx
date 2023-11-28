@@ -2,10 +2,11 @@ import { FaClipboard, FaHome, FaRegQuestionCircle, FaUser } from "react-icons/fa
 import { NavLink, Outlet } from "react-router-dom";
 import { MdAddComment } from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
+import useAdmin from "../Hooks/useAdmin";
 
 const Dashboard = () => {
     // TODO: get isAdmin value from the database
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto">

@@ -53,7 +53,7 @@ const Users = () => {
                                 <th>{index + 1}</th>
                                 <th className="avatar flex items-center">
                                     <div className="w-12 rounded-full">
-                                        <img src="https://img.freepik.com/free-vector/academic-excellence-illustration_24877-52352.jpg?w=740&t=st=1700937281~exp=1700937881~hmac=ac0382ae1091c14c4d83086828b3a88398a4d437445a55eebd805857a93271fb" />
+                                        <img src={user.image} />
                                     </div>
                                 </th>
                                 <td>{user.name}</td>

@@ -14,7 +14,7 @@ const StudentProfile = () => {
                             </div>
                         </div>
                         <h2>{user?.displayName}</h2>
-                        <h2 className="text-2xl font-bold">Teacher</h2>
+                        <h2 className="text-2xl font-bold">Student</h2>
                         <h3>{user?.email}</h3>
                         <h3>01710170798</h3>
                     </div>
