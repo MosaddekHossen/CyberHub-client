@@ -31,9 +31,8 @@ const Users = () => {
 
     return (
         <div>
-            <div className="md:flex justify-evenly my-4">
-                <h2 className="text-3xl">All Users: </h2>
-                <h2 className="text-3xl">Total Users: {users?.length}</h2>
+            <div className="my-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Total Users: {users?.length}</h2>
             </div>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">

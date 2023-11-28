@@ -64,7 +64,7 @@ const SignIn = () => {
                 <title>CyberHub | SignIn</title>
             </Helmet>
             <div className="justify-center my-20 flex">
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-indigo-400">
                     <h2 className="md:text-4xl text-2xl mt-7 mx-auto flex justify-center font-bold text-black">Please Login Now!</h2>
                     <div className="card-body">
                         <form onSubmit={handleLogin}>
@@ -105,7 +105,7 @@ const SignIn = () => {
                                 </clipPath>
                             </defs>
                         </svg>Google Login</button>
-                        <p>Do not have an account? <Link to={'/signUp'}><button href="" className="text-amber-500 mt-5 underline">Create an account</button></Link></p>
+                        <p className="text-white">Do not have an account? <Link to={'/signUp'}><button href="" className="text-white mt-5 underline">Create an account</button></Link></p>
                         <Link to={'/'} className="btn btn-neutral mt-5 bg-[#4d55cd] border-none">Go to home</Link>
                     </div>
                 </div>

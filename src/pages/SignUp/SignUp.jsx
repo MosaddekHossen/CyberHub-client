@@ -82,21 +82,21 @@ const SignUp = () => {
                 <title>CyberHub | SignUp</title>
             </Helmet>
             <div className="text-center px-8 lg:px-0 pb-10">
-                <div className="mx-auto lg:w-1/3 md:w-2/3 mt-20 bg-[#8470c2] p-5 rounded-lg border-2">
+                <div className="mx-auto lg:w-1/3 md:w-2/3 mt-20 bg-indigo-400 p-5 rounded-lg border-2">
                     <h2 className="text-3xl mb-8 mx-auto flex justify-center font-medium text-white">Please Register</h2>
                     <form onSubmit={handleRegister}>
-                        <input required type="text" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="name" placeholder="Your Name" id="" />
+                        <input required type="text" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="name" placeholder="Your Name" id="name" />
                         <br />
-                        <input required type="text" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="img" placeholder="Your Image" id="" />
+                        <input required type="text" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="img" placeholder="Your Image" id="image" />
                         <br />
-                        <input required type="email" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="email" placeholder="Email Address" id="" />
+                        <input required type="email" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="email" placeholder="Email Address" id="email" />
                         <br />
                         <div className="mb-4 relative">
                             <input
                                 type={showPassword ? "text" : "password"}
                                 className="w-full py-2 px-4 border-b-teal-200 border-b-2"
                                 name="password" required
-                                placeholder="Password" id="" />
+                                placeholder="Password" id="password" />
                             <span className="absolute top-3 right-3" onClick={() => setShowPassword(!showPassword)}>
                                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                             </span>
@@ -107,11 +107,11 @@ const SignUp = () => {
                             <label className="ml-1 text-white" htmlFor="terms">Accept our <a href="">Terms and conditions</a></label>
                         </div>
                         <br />
-                        <input className="btn bg-[#e727d7] mb-4 w-full text-[16px] font-bold hover:text-lime-600 text-white" type="submit" value="Register" />
+                        <input className="btn bg-indigo-500 mb-4 w-full text-[16px] font-bold hover:text-indigo-950 text-white" type="submit" value="Register" />
                     </form>
-                    <p className="text-white">Already have an account? <Link to={'/signIn'}><button href="" className="text-amber-500 underline">Login</button></Link></p>
+                    <p className="text-white">Already have an account? <Link to={'/signIn'}><button href="" className="text-white underline">Login</button></Link></p>
                 </div>
-                <Link to={'/'} className="btn btn-neutral mt-5 bg-[#8470c2] text-[16px] border-none">Go to home</Link>
+                <Link to={'/'} className="btn btn-neutral mt-5 bg-indigo-500 text-[16px] border-none">Go to home</Link>
             </div>
         </div>
     );

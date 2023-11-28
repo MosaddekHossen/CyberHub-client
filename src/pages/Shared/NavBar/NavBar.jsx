@@ -37,6 +37,11 @@ const Header = () => {
                 Dashboard
             </NavLink>
 
+            <NavLink to={'/signUp'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Sign Up
+            </NavLink>
+
         </ul>
     </>
 
@@ -56,9 +61,14 @@ const Header = () => {
                 className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
                 Teaching
             </NavLink>
-            <NavLink to={'/dashboard/teacherProfile'}
+            <NavLink to={'/dashboard'}
                 className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
                 Dashboard
+            </NavLink>
+
+            <NavLink to={'/signUp'}
+                className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "btn btn-info text-[16px] font-semibold"}                        >
+                Sign Up
             </NavLink>
         </ul>
     </>
