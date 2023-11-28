@@ -1,8 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The AuthProvider component seamlessly handles user authentication state changes, updating the context accordingly. It also integrates with the useAxiosPublic hook to automatically store the authentication token in local storage upon successful login. Usage Guidelines When using the AuthProvider component, ensure that you follow these guidelines: Wrap the root component of your application with the AuthProvider component. Use the provided context methods (createUser, signIn, logOut, googleLogin) to manage user authentication. Use the provided context variable (user) to access the currently logged-in user. Use the provided context variable (loading) to determine if the user authentication state is still loading. By following these guidelines, you can effectively manage user authentication in your Firebase applications using the AuthProvider component.

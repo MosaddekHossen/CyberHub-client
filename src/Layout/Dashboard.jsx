@@ -7,7 +7,7 @@ import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
     // TODO: get isAdmin value from the database
     const [isAdmin] = useAdmin();
-    const isTeacher = true;
+    const isTeacher = false;
 
     return (
         <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto">
