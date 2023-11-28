@@ -3,7 +3,7 @@ import Category from "../Category/Category";
 import Partners from "../Partners/Partners";
 import Teacher from "../Teacher/Teacher";
 import Company from "../Company/Company";
-import Users from "../Users/Users";
+import HomeUsers from "../HomeUsers/HomeUsers";
 import Stay from "../Stay/Stay";
 import Slider from "../Slider/Slider";
 import { Helmet } from "react-helmet-async";
@@ -17,7 +17,7 @@ const Home = () => {
             <div className="max-w-screen-xl mx-auto">
                 <Banner></Banner>
                 <Company></Company>
-                <Users></Users>
+                <HomeUsers></HomeUsers>
                 <Partners></Partners>
                 <div className="hidden md:block">
                     <Category></Category>

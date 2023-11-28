@@ -1,6 +1,6 @@
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
-const Users = () => {
+const HomeUsers = () => {
     return (
         <div>
             <SectionTitle
@@ -86,4 +86,4 @@ const Users = () => {
     );
 };
 
-export default Users;
+export default HomeUsers;

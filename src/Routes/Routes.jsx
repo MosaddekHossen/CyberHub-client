@@ -11,6 +11,8 @@ import Teaching from "../pages/Teaching/Teaching/Teaching";
 import Dashboard from "../Layout/Dashboard";
 import AllClasses from "../pages/AllClasses/AllClasses";
 import AdminProfile from "../pages/Dashboard/Admin/AdminProfile";
+import TeacherProfile from "../pages/Dashboard/Teacher/TeacherProfile";
+import Users from "../pages/Dashboard/Admin/Users";
 
 const Routes = createBrowserRouter([
     {
@@ -45,9 +47,24 @@ const Routes = createBrowserRouter([
         path: '/dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
+            // Admin routes
             {
                 path: 'adminProfile',
                 element: <AdminProfile />
+            },
+            {
+                path: 'users',
+                element: <Users />
+            },
+            // Teacher routes
+            {
+                path: 'teacherProfile',
+                element: <TeacherProfile />
+            },
+            // Student routes
+            {
+                path: 'studentProfile',
+                element: <TeacherProfile />
             }
         ]
     }

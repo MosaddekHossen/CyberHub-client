@@ -39,7 +39,7 @@ const Dashboard = () => {
                 </ul>
             </div>
             {/* Dashboard content */}
-            <div className="md:flex-1 p-5 md:p-10 w-full">
+            <div className="md:flex-1 p-5 md:pl-10 md:py-10 w-full">
                 <Outlet></Outlet>
             </div>
         </div>

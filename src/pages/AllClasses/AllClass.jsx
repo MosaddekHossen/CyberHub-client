@@ -5,7 +5,7 @@ const AllClass = ({ request }) => {
 
     return (
         <div>
-            <div className="card shadow-xl h-full mt-5 text-center">
+            <div className="card shadow-xl h-full mt-5">
                 <div className="avatar pt-7 pb-3 mx-auto">
                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={userImage} alt="Image" />
@@ -20,10 +20,10 @@ const AllClass = ({ request }) => {
                     <h3 className="font-semibold">Title: {title}</h3>
                 </div>
                 <div className="px-5 pb-5 ml-2">
-                    <h3 className="font-semibold">Price: $567</h3>
+                    <h3 className="font-semibold text-center">Price: $567</h3>
                 </div>
                 <div className="px-5 pb-5 ml-2">
-                    <h3 className="font-semibold">Total enroll: 56788+</h3>
+                    <h3 className="font-semibold text-center">Total enroll: 56788+</h3>
                 </div>
                 <p className="mx-6 p-1 font-sans text-[18px] font-semibold leading-normal antialiased opacity-75">
                     Short description: {category}
