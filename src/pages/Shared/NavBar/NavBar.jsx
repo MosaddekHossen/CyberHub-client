@@ -120,19 +120,24 @@ const Header = () => {
                     />
 
                     <div onClick={() => setIsOpen(!isOpen)}>
-                        {user ? <>
-                            <label tabIndex={0} className="btn btn-secondary btn-circle avatar">
-                                <div className="w-10 rounded-full">
-                                    <label>
-                                        <div>
-                                            <img className="w-10 rounded-full cursor-pointer" src={user?.photoURL} />
-                                        </div>
-                                    </label>
-                                </div>
-                            </label>
+                        {
+                            user ? <>
+                                <label tabIndex={0} className="btn btn-secondary btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <label>
+                                            <div>
+                                                <img className="w-10 rounded-full cursor-pointer" src={user?.photoURL} />
+                                            </div>
+                                        </label>
+                                    </div>
+                                </label>
 
-                        </>
-                            : <Link to={'/signIn'}><button className="btn btn-primary mr-3">Sign In</button></Link>}
+                            </>
+                                : <NavLink to={'/signIn'}
+                                    className={({ isActive }) => isActive ? "btn btn-primary text-[16px] font-semibold" : "md:btn btn-info md:text-[16px] text-[18px] font-semibold"}                        >
+                                    Sign In
+                                </NavLink>
+                        }
                     </div>
                     {user && isOpen && (
                         <div className='absolute rounded-xl shadow-md w-[40vw] p-2 md:p-2 lg:w-[10vw] mr-2 md:w-[20vw] bg-white right-0 top-20'>

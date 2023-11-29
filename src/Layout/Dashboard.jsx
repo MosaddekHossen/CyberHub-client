@@ -3,11 +3,12 @@ import { NavLink, Outlet } from "react-router-dom";
 import { MdAddComment } from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
 import useAdmin from "../Hooks/useAdmin";
+import useTeacher from "../Hooks/useTeacher";
 
 const Dashboard = () => {
     // TODO: get isAdmin value from the database
     const [isAdmin] = useAdmin();
-    const isTeacher = false;
+    const [isTeacher] = useTeacher();
 
     return (
         <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto">

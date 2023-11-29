@@ -17,10 +17,13 @@ const SignUp = () => {
         e.preventDefault();
         const name = e.target.name.value;
         const image = e.target.img.value;
-        const email = e.target.email.value;
+        // const email = e.target.email.value;
         const password = e.target.password.value;
         const accepted = e.target.terms.checked;
         // console.log(accepted)
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value.toLowerCase();
+        // console.log(lowercaseEmail,email);
 
         if (password.length < 6) {
             return Swal.fire('Oops!', "Is less than 6 characters. Your password must be at least 6 characters long.", 'error');
