@@ -3,15 +3,13 @@ import { Link, useLoaderData } from "react-router-dom";
 const Details = () => {
     const request = useLoaderData();
     const { name, title, category, userImage } = request || {};
-
+    console.log(request);
     return (
         <div className="my-24 w-3/4 mx-auto">
             <div className="card shadow-xl mt-5">
-                <div className="avatar pt-7 pb-3 mx-auto">
-                    <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img src={userImage} alt="Image" />
-                    </div>
-                </div>
+                <figure >
+                    <img src={userImage} alt="Food" className="h-80 w-1/2" />
+                </figure>
                 <div className="flex items-center my-3 mx-4">
                     <div className="ml-3">
                         <h3 className="font-bold">Name: {name}</h3>
@@ -31,7 +29,7 @@ const Details = () => {
                 </p>
                 <div className="p-6 pt-5">
                     <div className="form-control mb-2 lg:mb-0">
-                        <Link to={'/payment'}><button className="btn btn-block bg-gray-600 text-white hover:text-blue-600 font-bold">Pay</button></Link>
+                        <Link to={'/payment'}><button className="btn btn-primary btn-block font-bold">Pay</button></Link>
                     </div>
                 </div>
             </div>

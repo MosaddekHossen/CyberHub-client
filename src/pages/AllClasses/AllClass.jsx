@@ -31,7 +31,7 @@ const AllClass = ({ request }) => {
                 </p>
                 <div className="p-6 pt-5">
                     <div className="form-control mb-2 lg:mb-0">
-                        <Link to={`/class/${_id}`}><input type="submit" className="btn btn-block bg-gray-600 text-white hover:text-blue-600 font-bold" value="Enroll" /></Link>
+                        <Link to={`/class/${_id}`}><input type="submit" className="btn btn-secondary btn-block font-bold" value="Enroll" /></Link>
                     </div>
                 </div>
             </div> 

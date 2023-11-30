@@ -1,8 +1,11 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -15,6 +18,20 @@ const CheckoutForm = () => {
 
         if (card === null) {
             return
+        }
+
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
+            type: 'card',
+            card
+        })
+
+        if (error) {
+            console.log('Payment error', error);
+        }
+        else {
+            Swal.fire('Good job!', 'Your Payment Successfully!', 'success')
+            navigate('/dashboard/myEnrollClass')
+            console.log('Payment method', paymentMethod);
         }
     }
 

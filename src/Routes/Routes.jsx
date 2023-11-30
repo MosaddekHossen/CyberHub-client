@@ -16,12 +16,12 @@ import Users from "../pages/Dashboard/Admin/Users";
 import StudentProfile from "../pages/Dashboard/Student/StudentProfile";
 import MyClass from "../pages/Teaching/Teaching/MyClass";
 import AddClass from "../pages/Teaching/Teaching/AddClass";
-import MyEnrollClass from "../pages/Dashboard/Student/MyEnrollClass";
 import AdminAllClasses from "../pages/Dashboard/Admin/AdminAllClasses";
 import TeacherRequest from "../pages/Dashboard/Admin/TeacherRequest";
 import IntroDashboard from "../pages/Dashboard/Dashboard/IntroDashboard";
 import Details from "../pages/AllClasses/Details";
 import Payment from "../pages/AllClasses/Payment";
+import MyEnrollClasses from "../pages/Dashboard/Student/MyEnrollClasses";
 
 const Routes = createBrowserRouter([
     {
@@ -106,7 +106,8 @@ const Routes = createBrowserRouter([
             },
             {
                 path: 'myEnrollClass',
-                element: <MyEnrollClass />
+                element: <MyEnrollClasses />,
+                loader: () => fetch('http://localhost:500/request')
             }
         ]
     }
