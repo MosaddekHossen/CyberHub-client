@@ -7,7 +7,7 @@ const MyEnrollClass = ({ enrollClass }) => {
             <div>
                 <div className="card shadow-xl mt-5">
                     <figure>
-                        <img src={userImage} alt="Food" className="h-80 w-full" />
+                        <img src={userImage} alt="Image" className="h-80 w-full" />
                     </figure>
                     <div className="flex items-center my-3 mx-4">
                         <div className="ml-3">

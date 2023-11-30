@@ -41,7 +41,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/class/:id',
                 element: <PrivateRoute><Details /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:500/request/${params.id}`)
+                loader: ({ params }) => fetch(`https://72-cyber-hub-server.vercel.app/request/${params.id}`)
             },
             {
                 path: '/payment',
@@ -107,7 +107,7 @@ const Routes = createBrowserRouter([
             {
                 path: 'myEnrollClass',
                 element: <MyEnrollClasses />,
-                loader: () => fetch('http://localhost:500/request')
+                loader: () => fetch('https://72-cyber-hub-server.vercel.app/request')
             }
         ]
     }

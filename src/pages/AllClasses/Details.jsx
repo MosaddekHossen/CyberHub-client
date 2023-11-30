@@ -8,7 +8,7 @@ const Details = () => {
         <div className="my-24 w-3/4 mx-auto">
             <div className="card shadow-xl mt-5">
                 <figure >
-                    <img src={userImage} alt="Food" className="h-80 w-1/2" />
+                    <img src={userImage} alt="Image" className="h-80 md:w-1/2 w-full" />
                 </figure>
                 <div className="flex items-center my-3 mx-4">
                     <div className="ml-3">
