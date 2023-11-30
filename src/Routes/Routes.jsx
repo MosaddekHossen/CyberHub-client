@@ -20,6 +20,8 @@ import MyEnrollClass from "../pages/Dashboard/Student/MyEnrollClass";
 import AdminAllClasses from "../pages/Dashboard/Admin/AdminAllClasses";
 import TeacherRequest from "../pages/Dashboard/Admin/TeacherRequest";
 import IntroDashboard from "../pages/Dashboard/Dashboard/IntroDashboard";
+import Details from "../pages/AllClasses/Details";
+import Payment from "../pages/AllClasses/Payment";
 
 const Routes = createBrowserRouter([
     {
@@ -35,6 +37,15 @@ const Routes = createBrowserRouter([
                 path: '/allClasses',
                 element: <AllClasses />,
                 loader: () => fetch('https://72-cyber-hub-server.vercel.app/request')
+            },
+            {
+                path: '/class/:id',
+                element: <PrivateRoute><Details /></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:500/request/${params.id}`)
+            },
+            {
+                path: '/payment',
+                element: <Payment />
             },
             {
                 path: '/signIn',

@@ -113,7 +113,8 @@ const AddTeacher = () => {
                             <span className="label-text">User Image</span>
                         </label>
                         <label>
-                            <input type="text" required name="userImage" placeholder="User Image" readOnly defaultValue={photoURL} className="input input-bordered w-full" />
+                            <img src={photoURL} alt="" />
+                            <input type="hidden" required name="userImage" placeholder="User Image" readOnly defaultValue={photoURL} className="input input-bordered w-full" />
                         </label>
                     </div>
                     <input type="submit" className="btn btn-block bg-gray-600 text-[18px] text-white hover:text-blue-600 font-bold" value="Review" />
