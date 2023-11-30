@@ -34,7 +34,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/allClasses',
                 element: <AllClasses />,
-                loader: () => fetch('http://localhost:500/request')
+                loader: () => fetch('https://72-cyber-hub-server.vercel.app/request')
             },
             {
                 path: '/signIn',

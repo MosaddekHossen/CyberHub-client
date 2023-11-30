@@ -43,14 +43,14 @@ const TeacherRequest = () => {
                 <div className="overflow-x-auto">
                     <table className="table table-zebra">
                         {/* head */}
-                        <thead>
+                        {/* <thead>
                             <tr className="text-[16px] font-bold">
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
                             </tr>
-                        </thead>
+                        </thead> */}
                         <tbody>
                             {
                                 users?.map((user) => <tr key={user?._id}>
@@ -61,15 +61,18 @@ const TeacherRequest = () => {
                                         </div>
                                     </th>
                                     <td>{user.name}</td>
-                                    <td>{user.email}</td>
+                                    <td>Teacher</td>
+                                    <td>experienced</td>
+                                    <td>webDevelopment</td>
+                                    <td>Pending</td>
                                     <td>
                                         {user.role === 'teacher' ? <button
-                                            className="btn hover:text-black text-white bg-[#6de165] btn-ghost">Approved</button> : <button
+                                            className="btn hover:text-black text-white bg-[#6de165] btn-ghost">Accepted</button> : <button
                                                 onClick={() => handleMakeTeacher(user)}
-                                                className="btn hover:text-black text-white bg-indigo-500 btn-ghost">accepted</button>}
+                                                className="btn hover:text-black text-white bg-indigo-500 btn-ghost">Approve</button>}
                                     </td>
                                     <td>
-                                        {user.role === 'teache' ? <button
+                                        {user.role === 'click' ? <button
                                             className="btn hover:text-black text-white bg-[#ff4d3a] btn-ghost">Rejected</button> : <button
                                                 onClick={() => handleMakeTeacher(user)}
                                                 className="btn hover:text-black text-white bg-[#ff4b37] btn-ghost">reject</button>}

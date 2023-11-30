@@ -19,7 +19,7 @@ const AddTeacher = () => {
         console.log(request);
 
         // Send data to the server (Normal)
-        // fetch('http://localhost:500/request', {
+        // fetch('https://72-cyber-hub-server.vercel.app/request', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
