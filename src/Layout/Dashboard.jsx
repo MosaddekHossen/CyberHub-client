@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
         <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto">
             {/* Dashboard side bar */}
-            <div className="md:w-72 lg:w-80 w-full pb-10 md:pb-0 max-h-full md:min-h-screen bg-indigo-300">
+            <div className="md:w-4/12 lg:w-80 w-full pb-10 md:pb-0 max-h-full md:min-h-screen bg-indigo-300">
                 <ul className="menu space-y-4 mt-5 grid justify-center">
                     {
                         isAdmin ? (
@@ -52,7 +52,7 @@ const Dashboard = () => {
                 </ul>
             </div>
             {/* Dashboard content */}
-            <div className="md:flex-1 p-5 md:pl-10 md:py-10 w-full">
+            <div className="md:w-8/12 flex-1 p-5 md:pl-10 md:py-10 w-full">
                 <Outlet></Outlet>
             </div>
         </div>
