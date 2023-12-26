@@ -2,8 +2,6 @@ import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Partners from "../Partners/Partners";
 import Teacher from "../Teacher/Teacher";
-import Company from "../Company/Company";
-import HomeUsers from "../HomeUsers/HomeUsers";
 import Stay from "../Stay/Stay";
 import Slider from "../Slider/Slider";
 import { Helmet } from "react-helmet-async";
@@ -16,8 +14,6 @@ const Home = () => {
             </Helmet>
             <div className="max-w-screen-xl mx-auto">
                 <Banner></Banner>
-                <Company></Company>
-                <HomeUsers></HomeUsers>
                 <Partners></Partners>
                 <div className="hidden md:block">
                     <Category></Category>
