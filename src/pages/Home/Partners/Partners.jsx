@@ -1,10 +1,18 @@
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Partners = () => {
+
+    const subHeading =
+        <>
+            Teach offers students the best of education and entertainment opportunities available in the area.
+            <br />
+            We are glad to take care of every student and university entrant.
+        </>
+
     return (<>
         <SectionTitle
-            heading={"Our Company"}
-            subHeading={"We believe in the power of collaboration to drive innovation and success."}
+            heading={"What We Offer"}
+            subHeading={subHeading}
         ></SectionTitle>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-8 xl:px-0 space-y-5 md:space-y-0">
             <div className="text-center space-y-3">
