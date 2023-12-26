@@ -46,7 +46,6 @@ const Category = () => {
                                     <img src="https://img.freepik.com/premium-photo/successful-positive-bearded-man-looking-camera-with-toothy-smile-indoor-studio-shot-isolated-blue-background_533057-1741.jpg" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-[#141414]">Full Stack Web Development Bootcamp</h3>
                             <h3 className="text-2xl font-semibold text-[#413232]">Enrollment: 5000+</h3>
                             <div className="rating rating-lg">
                                 <input type="radio" name="rating-9" className="rating-hidden" />
@@ -66,7 +65,6 @@ const Category = () => {
                                     <img src="https://img.freepik.com/free-photo/middle-aged-cheerful-dark-skinned-male-with-shining-smile_273609-28538.jpg?w=996&t=st=1700846698~exp=1700847298~hmac=c8ce90668cd58bed5c44b22f3dd7beca14c6a2bb5e49902121e7af667c4a6946" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-[#141414]">Data Science and Machine Learning Masterclass</h3>
                             <h3 className="text-2xl font-semibold text-[#413232]">Enrollment: 4000+</h3>
                             <div className="rating rating-lg">
                                 <input type="radio" name="rating-9" className="rating-hidden" />
@@ -86,7 +84,6 @@ const Category = () => {
                                     <img src="https://img.freepik.com/premium-photo/close-up-portrait-satisfied_1258-14014.jpg" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-[#141414]"> Digital Marketing Strategies</h3>
                             <h3 className="text-2xl font-semibold text-[#413232]">Enrollment: 4500+</h3>
                             <div className="rating rating-lg">
                                 <input type="radio" name="rating-9" className="rating-hidden" />
@@ -106,7 +103,6 @@ const Category = () => {
                                     <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=996" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-[#141414]">Mindfulness Meditation for Stress Reduction</h3>
                             <h3 className="text-2xl font-semibold text-[#413232]">Enrollment: 6000+</h3>
                             <div className="rating rating-lg">
                                 <input type="radio" name="rating-9" className="rating-hidden" />
@@ -126,7 +122,6 @@ const Category = () => {
                                     <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=740&t=st=1700838882~exp=1700839482~hmac=afd862722c78d9470de37d8da95848143f8c99269c9eade2db407c0f308e107d" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-[#141414]">Photography: Capturing Moments with Impact</h3>
                             <h3 className="text-2xl font-semibold text-[#413232]">Enrollment: 7000+</h3>
                             <div className="rating rating-lg">
                                 <input type="radio" name="rating-9" className="rating-hidden" />
