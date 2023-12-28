@@ -54,7 +54,7 @@ const Slider = () => {
                             {/* Subtitle with review name */}
                             <div className="subtitle" data-swiper-parallax="-200">
                                 <h2 className='font-bold text-2xl pb-5'>{review?.name}</h2>
-                                <h2 className='font-bold text-[18px] pb-5'>{review?.title}</h2>
+                                <h2 className='font-bold text-[#16px] md:text-[18px] pb-5'>{review?.title}</h2>
                             </div>
                             {/* Text with review details */}
                             <div className="text" data-swiper-parallax="-100">
