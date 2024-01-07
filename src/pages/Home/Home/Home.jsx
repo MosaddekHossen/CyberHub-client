@@ -14,12 +14,12 @@ const Home = () => {
             </Helmet>
             <div className="max-w-screen-xl mx-auto">
                 <Banner></Banner>
+                <Teacher></Teacher>
                 <Partners></Partners>
                 <div className="hidden md:block">
                     <Category></Category>
                 </div>
                 <div className="md:mt-60 mt-0">
-                    <Teacher></Teacher>
                 </div>
                 <Stay></Stay>
                 <Slider></Slider>

@@ -13,7 +13,6 @@ const Stay = () => {
         <div className='mb-14'>
             <SectionTitle
                 heading={"Stay Connected"}
-                subHeading={"At a Glance"}
             ></SectionTitle>
             <Accordion allowZeroExpanded>
                 <AccordionItem>

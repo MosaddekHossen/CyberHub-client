@@ -8,8 +8,6 @@ const Partners = () => {
     const subHeading =
         <>
             Teach offers students the best of education and entertainment opportunities available in the area.
-            <br />
-            We are glad to take care of every student and university entrant.
         </>
 
     return (<>

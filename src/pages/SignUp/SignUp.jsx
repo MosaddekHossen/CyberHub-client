@@ -85,7 +85,7 @@ const SignUp = () => {
                 <title>CyberHub | SignUp</title>
             </Helmet>
             <div className="text-center px-8 lg:px-0 pb-10">
-                <div className="mx-auto lg:w-1/3 md:w-2/3 mt-20 bg-indigo-400 p-5 rounded-lg border-2">
+                <div className="mx-auto lg:max-w-lg md:w-2/3 mt-20 bg-indigo-400 p-5 rounded-lg border-2">
                     <h2 className="text-3xl mb-8 mx-auto flex justify-center font-medium text-white">Please Register</h2>
                     <form onSubmit={handleRegister}>
                         <input required type="text" className="mb-4 w-full py-2 px-4 border-b-teal-200 border-b-2" name="name" placeholder="Your Name" id="name" />
